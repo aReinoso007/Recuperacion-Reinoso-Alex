@@ -9,19 +9,21 @@ import javax.servlet.http.HttpServletResponse;
 
 import ec.edu.ups.dao.ClienteDAO;
 import ec.edu.ups.dao.DAOFactory;
+import ec.edu.ups.dao.VehiculoDAO;
 import ec.edu.ups.entidad.Cliente;
+import ec.edu.ups.entidad.Vehiculo;
 
 /**
- * Servlet implementation class CrearCliente
+ * Servlet implementation class AgregarVehiculo
  */
-@WebServlet("/CrearCliente")
-public class CrearCliente extends HttpServlet {
+@WebServlet("/AgregarVehiculo")
+public class AgregarVehiculos extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CrearCliente() {
+    public AgregarVehiculos() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -39,28 +41,33 @@ public class CrearCliente extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String cedula;
-		String nombre;
-		String direccion;
-		String telefono;
+		String placa="";
+		String marca="";
+		String modelo="";
+		String cedula="";
 		
+		Vehiculo vehiculo = new Vehiculo();
 		Cliente cliente = new Cliente();
-		
+		ClienteDAO cliDao = DAOFactory.getFactory().getClienteDAO();
 		String accion = request.getParameter("resp");
-		ClienteDAO clienteDAO = DAOFactory.getFactory().getClienteDAO();
+		VehiculoDAO vehiculoDAO = DAOFactory.getFactory().getVehiculoDAO();
 		
-		if(accion.equals("Registrarse")) {
+		if(accion.equals("Registrar")) {
 			cedula = request.getParameter("cdi");
-			nombre = request.getParameter("nombre");
-			direccion = request.getParameter("direccion");
-			telefono = request.getParameter("telefono");
+			placa = request.getParameter("placa");
+			marca = request.getParameter("marca");
+			modelo = request.getParameter("modelo");
 			
-			cliente = new Cliente(cedula, nombre, direccion, telefono);
-			System.out.println("el cliente: "+cliente);
+			System.out.println("Cedula que se va a buscar: "+cedula);
+			cliente = cliDao.buscar(cedula);
+			System.out.println("Cliente recuperdo: "+cliente);
+			System.out.println("Cliente a ser agregado");
 			
-			System.out.println("Creando cliente en base");
-			clienteDAO.create(cliente);
-			System.out.println("Cliente creado en la base"+clienteDAO.findAll());
+			vehiculo = new Vehiculo(placa, cliente, marca, modelo);
+			System.out.println("Vehiculo a crear: "+vehiculo);
+			
+			vehiculoDAO.create(vehiculo);
+			System.out.println("Vehiculo agregado correctamente");
 			
 			getServletContext().getRequestDispatcher("/JSP/Index.jsp").forward(request, response);
 		}

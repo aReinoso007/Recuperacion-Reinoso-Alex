@@ -23,9 +23,9 @@ public class Test {
 		
 		System.out.println(c1);
 		cli.create(c1);
-		/*
-		System.out.println("Usuario creado");
 		
+		System.out.println("Usuario creado");
+		/*
 		System.out.println("Agregando vehiculo al usuario");
 		Vehiculo v1 = new Vehiculo("ABCD", c2, "toyota", "m1");
 		Ticket t1 = new Ticket(new GregorianCalendar(2020, 5, 22), new GregorianCalendar(2020, 5, 23),v1);

@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="container">
-		<form action="/Reinoso-Alex-Examen/AgregarVehiculos" method="POST">
+		<form action="/Recuperacion-Reinoso-Alex/AgregarVehiculos" method="POST">
 			<h1>Registrar auto de cliente</h1>
 				<input type="text" placeholder="placa" name="placa" required><br>
 				<input type="text" placeholder="cedula del propietario" name="cdi"><br>

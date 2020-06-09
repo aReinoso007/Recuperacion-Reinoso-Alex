@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div class="container">
-		<form action="/Reinoso-Alex-Examen/RegistrarTicket" method="">
+		<form action="/Recuperacion-Reinoso-Alex/RegistrarTicket" method="">
 			<input type="text" placeholder=""><br>
 			
 		</form>"

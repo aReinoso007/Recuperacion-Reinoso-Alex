@@ -7,10 +7,10 @@
 <title>Parqueadero</title>
 </head>
 <body>	
-<a href="/Reinoso-Alex-Examen/JSP/CrearUsuario.jsp">Crear Cliente</a><br>
-<a href="/Reinoso-Alex-Examen/JSP/AgregarVehiculos.jsp">Registrar vehiculo clinte</a><br>
-<form action="/Reinoso-Alex-Examen/listarCliente" method="GET">
+	<a href="/Recuperacion-Reinoso-Alex/JSP/CrearUsuario.jsp">Crear Cliente</a><br>
+	<a href="/Recuperacion-Reinoso-Alex/JSP/AgregarVehiculos.jsp">Registrar vehiculo clinte</a><br>
+	<form action="/Recuperacion-Reinoso-Alex/listarCliente" method="GET">
 
-</form>
+	</form>
 </body>
 </html>

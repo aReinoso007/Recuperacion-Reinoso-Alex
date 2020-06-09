@@ -9,7 +9,7 @@ public class JPAVehiculoDAO extends JPAGenericDAO<Vehiculo, String> implements V
 	
 	public JPAVehiculoDAO() {
 		super(Vehiculo.class);
-		this.em = Persistence.createEntityManagerFactory("Reinoso-Alex-Examen").createEntityManager();
+		this.em = Persistence.createEntityManagerFactory("Recuperacion-Reinoso-Alex").createEntityManager();
 		// TODO Auto-generated constructor stub
 	}
 	

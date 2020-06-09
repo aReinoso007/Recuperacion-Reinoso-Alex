@@ -15,7 +15,7 @@
 	
 </div>
 <div class="container">
-	<form action="/Reinoso-Alex-Examen/CrearCliente" method="POST">
+	<form action="/Recuperacion-Reinoso-Alex/CrearCliente" method="POST">
 		<h1>Registrar Cliente</h1><br>
 				<input type="text" placeholder="Cedula" name="cdi" required><br>
 				<input type="text" placeholder="Nombre" name="nombre" required><br>

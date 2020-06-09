@@ -1,6 +1,6 @@
 package ec.edu.ups.dao;
 
-import ed.edu.ups.jpa.JPADAOFactory;
+import ec.edu.ups.jpa.JPADAOFactory;
 
 public abstract class DAOFactory {
 	

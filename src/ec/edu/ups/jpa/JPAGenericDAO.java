@@ -1,4 +1,4 @@
-package ed.edu.ups.jpa;
+package ec.edu.ups.jpa;
 
 import java.util.List;
 

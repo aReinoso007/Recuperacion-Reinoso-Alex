@@ -55,12 +55,13 @@ public class CrearCliente extends HttpServlet {
 			direccion = request.getParameter("direccion");
 			telefono = request.getParameter("telefono");
 			
+			//Cliente("1400919312","Sharon", "Macas","0998952719");
 			cliente = new Cliente(cedula, nombre, direccion, telefono);
 			System.out.println("el cliente: "+cliente);
 			
 			System.out.println("Creando cliente en base");
 			clienteDAO.create(cliente);
-			System.out.println("Cliente creado en la base"+clienteDAO.findAll());
+			System.out.println("Clientes registrados"+clienteDAO.findAll());
 			
 			getServletContext().getRequestDispatcher("/JSP/Index.jsp").forward(request, response);
 		}

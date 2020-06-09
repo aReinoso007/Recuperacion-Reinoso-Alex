@@ -21,8 +21,8 @@ public class Test {
 		
 		
 		
-		System.out.println(c1);
-		cli.create(c1);
+		System.out.println(c2);
+		cli.create(c2);
 		
 		System.out.println("Usuario creado");
 		/*

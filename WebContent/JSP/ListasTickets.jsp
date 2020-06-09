@@ -11,7 +11,7 @@
 	<!-- <c:set var="v1" value="${requestScope['vehiculos']}" />
 	<c:set var="c1" value="${requestScope['cliente']}" /> -->
 	<div class="container">
-		<form action="/Recuperacion-Reinoso-Alex/listarCliente" method="GET">
+		<form action="/Recuperacion-Reinoso-Alex/ListarTickets" method="GET">
 			<div class="header">
 				<table class="container">
 					<thead>

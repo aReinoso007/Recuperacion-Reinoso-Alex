@@ -10,8 +10,6 @@
 	<a href="/Recuperacion-Reinoso-Alex/JSP/CrearUsuario.jsp">Crear Cliente</a><br>
 	<a href="/Recuperacion-Reinoso-Alex/JSP/AgregarVehiculos.jsp">Registrar vehiculo clinte</a><br>
 	<a href="/Recuperacion-Reinoso-Alex/JSP/RegistrarTicket.jsp">Registrar ticket</a><br>
-	<form action="/Recuperacion-Reinoso-Alex/listarCliente" method="GET">
-
-	</form>
+	<a href="/Recuperacion-Reinoso-Alex/JSP/ListasTickets.jsp">Ver listas de tickets</a>
 </body>
 </html>

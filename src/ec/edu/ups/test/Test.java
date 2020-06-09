@@ -30,7 +30,7 @@ public class Test {
 		
 		//System.out.println("Usuario creado");
 		
-		System.out.println("Agregando vehiculo al usuario");
+		//System.out.println("Agregando vehiculo al usuario");
 		Vehiculo v1 = new Vehiculo("ABCD", c1, "toyota", "m1");
 		//Ticket t1 = new Ticket(new GregorianCalendar(2020, 5, 22), new GregorianCalendar(2020, 5, 23),v1);
 		//tick.create(t1);
@@ -41,7 +41,9 @@ public class Test {
 
 		//System.out.println(cli.buscar("1400919312"));
 		
-		System.out.println("Consulta de vehiculo: "+vehi.buscarVehiculo("1400919302", "ABCD"));
+		//System.out.println("Consulta de vehiculo: "+vehi.buscarVehiculo("1400919302", "ABCD"));
+		System.out.println("lista de ticket: "+tick.findAll() );
+		//System.out.println("Lista de clientes: "+cli.findAll());
 	}
 
 }

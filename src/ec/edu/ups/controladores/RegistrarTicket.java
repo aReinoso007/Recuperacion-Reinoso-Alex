@@ -68,8 +68,8 @@ public class RegistrarTicket extends HttpServlet {
 													Integer.parseInt(request.getParameter("dIngreso")));
 			
 			fechasalida = new GregorianCalendar(	Integer.parseInt(request.getParameter("aSalida")), 
-					Integer.parseInt(request.getParameter("mSalida")),
-					Integer.parseInt(request.getParameter("dSalida")));
+													Integer.parseInt(request.getParameter("mSalida")),
+													Integer.parseInt(request.getParameter("dSalida")));
 			
 			vehiculo = vDao.buscarVehiculo(cedula, placa);
 			System.out.println("Vehiculo recuperado:"+vehiculo);

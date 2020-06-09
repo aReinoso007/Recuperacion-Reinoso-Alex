@@ -110,6 +110,7 @@ public class JPAGenericDAO<T, ID> implements GenericDAO<T, ID> {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		System.out.println("Lista recuperada: "+lista);
 		return lista;
 	}
 

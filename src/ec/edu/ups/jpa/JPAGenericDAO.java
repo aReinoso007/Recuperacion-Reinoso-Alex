@@ -8,6 +8,7 @@ import javax.persistence.Query;
 
 import ec.edu.ups.dao.GenericDAO;
 import ec.edu.ups.entidad.Cliente;
+import ec.edu.ups.entidad.Vehiculo;
 
 public class JPAGenericDAO<T, ID> implements GenericDAO<T, ID> {
 
@@ -120,6 +121,16 @@ public class JPAGenericDAO<T, ID> implements GenericDAO<T, ID> {
 		System.out.println("cedula para consultar: " +cdi);
 		System.out.println("Resultado de la busqueda: "+nq.getSingleResult());
 		return (Cliente) nq.getSingleResult();
+	}
+
+
+	@Override
+	public Vehiculo buscarVehiculo(String cdi, String placa) {
+		Query nq = em.createNativeQuery("SELECT * FROM VEHICULO WHERE cliente_cedula=? and placa=?", Vehiculo.class);
+		nq.setParameter(1, cdi);
+		nq.setParameter(2, placa);
+		System.out.println("Resultado de la busqueda: "+nq.getSingleResult());
+		return (Vehiculo) nq.getSingleResult();
 	}
 
 }

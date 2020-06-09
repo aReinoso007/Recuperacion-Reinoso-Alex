@@ -16,7 +16,7 @@ import ec.edu.ups.entidad.Vehiculo;
 /**
  * Servlet implementation class AgregarVehiculo
  */
-@WebServlet("/AgregarVehiculo")
+@WebServlet("/AgregarVehiculos")
 public class AgregarVehiculos extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

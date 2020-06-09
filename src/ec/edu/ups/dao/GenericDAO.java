@@ -3,6 +3,7 @@ package ec.edu.ups.dao;
 import java.util.List;
 
 import ec.edu.ups.entidad.Cliente;
+import ec.edu.ups.entidad.Vehiculo;
 
 public interface GenericDAO<T, ID> {
 	
@@ -20,4 +21,5 @@ public interface GenericDAO<T, ID> {
 	void deleteByID(ID id);
 	List<T> findAll();
 	Cliente buscar(String cdi);
+	Vehiculo buscarVehiculo(String cdi, String placa);
 }
